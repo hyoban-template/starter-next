@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "typecheck": "tsc",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

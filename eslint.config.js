@@ -74,6 +74,36 @@ export default [
       ...next.configs.recommended.rules,
     },
   },
+  {
+    files,
+    ignores: [
+      // https://nextjs.org/docs/getting-started/project-structure#routing-files
+      "src/app/**/{layout,page,loding,not-found,error,global-error,route,template,default}.tsx",
+    ],
+    languageOptions,
+    linterOptions,
+    plugins,
+    rules: {
+      // disable export * and enum
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: ":matches(ExportAllDeclaration)",
+          message: "Export only modules you need.",
+        },
+        {
+          selector: "TSEnumDeclaration",
+          message: "We should not use Enum",
+        },
+      ],
+      "no-restricted-exports": [
+        "error",
+        {
+          restrictDefaultExports: { direct: true },
+        },
+      ],
+    },
+  },
   // disable formatting rules, make sure to put this last
   eslintConfigPrettier,
 ]
