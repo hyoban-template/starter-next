@@ -2,6 +2,8 @@ import "~/styles/globals.css"
 
 import { Inter } from "next/font/google"
 
+import { cn } from "~/lib/utils"
+
 import { ThemeProvider } from "./theme-provider"
 
 const inter = Inter({
@@ -20,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="zh-Hans" suppressHydrationWarning className="h-full">
+      <body className={cn("h-full", inter.className)}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

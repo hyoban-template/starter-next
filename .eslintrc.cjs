@@ -60,8 +60,10 @@ module.exports = {
 
   overrides: [
     {
-      files: [
-        "!src/app/**/{layout,page,loding,not-found,error,global-error,route,template,default}.tsx",
+      files: ["*.tsx", "*.ts"],
+      excludedFiles: [
+        "src/app/**/{layout,page,loding,not-found,error,global-error,route,template,default}.tsx",
+        "*.config.ts",
       ],
       rules: {
         // disable export * and enum
