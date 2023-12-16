@@ -1,6 +1,4 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "eslint.experimental.useFlatConfig": true,
-  "unocss.disable": false
+  "editor.formatOnSave": true
 }

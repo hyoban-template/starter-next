@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  next@14.0.4:
-    hash: oyuid57humqwnllmj5vsjgpwyy
-    path: patches/next@14.0.4.patch
-
 dependencies:
   '@radix-ui/react-slot':
     specifier: ^1.0.2
@@ -30,7 +25,7 @@ dependencies:
     version: 0.294.0(react@18.2.0)
   next:
     specifier: ^14.0.4
-    version: 14.0.4(patch_hash=oyuid57humqwnllmj5vsjgpwyy)(@babel/core@7.23.5)(react-dom@18.2.0)(react@18.2.0)
+    version: 14.0.4(@babel/core@7.23.5)(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -108,6 +103,9 @@ devDependencies:
   eslint-plugin-react-hooks:
     specifier: ^4.6.0
     version: 4.6.0(eslint@8.55.0)
+  eslint-plugin-tailwindcss:
+    specifier: ^3.13.0
+    version: 3.13.0(tailwindcss@3.3.6)
   eslint-plugin-unicorn:
     specifier: ^49.0.0
     version: 49.0.0(eslint@8.55.0)
@@ -1833,6 +1831,17 @@ packages:
       eslint: 8.55.0
     dev: true
 
+  /eslint-plugin-tailwindcss@3.13.0(tailwindcss@3.3.6):
+    resolution: {integrity: sha512-Fcep4KDRLWaK3KmkQbdyKHG0P4GdXFmXdDaweTIPcgOP60OOuWFbh1++dufRT28Q4zpKTKaHwTsXPJ4O/EjU2Q==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      tailwindcss: ^3.3.2
+    dependencies:
+      fast-glob: 3.3.2
+      postcss: 8.4.32
+      tailwindcss: 3.3.6
+    dev: true
+
   /eslint-plugin-unicorn@49.0.0(eslint@8.55.0):
     resolution: {integrity: sha512-0fHEa/8Pih5cmzFW5L7xMEfUTvI9WKeQtjmKpTUmY+BiFCDxkxrTdnURJOHKykhtwIeyYsxnecbGvDCml++z4Q==}
     engines: {node: '>=16'}
@@ -2864,7 +2873,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next@14.0.4(patch_hash=oyuid57humqwnllmj5vsjgpwyy)(@babel/core@7.23.5)(react-dom@18.2.0)(react@18.2.0):
+  /next@14.0.4(@babel/core@7.23.5)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-qbwypnM7327SadwFtxXnQdGiKpkuhaRLE2uq62/nRul9cj9KhQ5LhHmlziTNqUidZotw/Q1I9OjirBROdUJNgA==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -2903,7 +2912,6 @@ packages:
       - '@babel/core'
       - babel-plugin-macros
     dev: false
-    patched: true
 
   /node-fetch-native@1.4.1:
     resolution: {integrity: sha512-NsXBU0UgBxo2rQLOeWNZqS3fvflWePMECr8CoSWoSTqCqGbVVsvl9vZu1HfQicYN0g5piV9Gh8RTEvo/uP752w==}
