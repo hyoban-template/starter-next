@@ -4,14 +4,13 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:unicorn/recommended",
-    "plugin:jsx-a11y/recommended",
     "plugin:@eslint-react/all-legacy",
     "plugin:react-hooks/recommended",
     "plugin:@next/next/recommended",
     "plugin:tailwindcss/recommended",
     "prettier",
   ],
-  plugins: ["@typescript-eslint", "validate-jsx-nesting"],
+  plugins: ["@typescript-eslint"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,
@@ -20,16 +19,29 @@ module.exports = {
   root: true,
   ignorePatterns: ["**/*.js", "**/*.cjs", "**/*.mjs"],
   rules: {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
+    ],
+
     "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-unused-vars": "off",
+
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/consistent-type-exports": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
+
+    "no-console": ["warn", { allow: ["warn", "error"] }],
+
     "unicorn/prevent-abbreviations": "off",
     // https://github.com/sindresorhus/meta/discussions/7
     "unicorn/no-null": "off",
     // https://github.com/orgs/web-infra-dev/discussions/10
     "unicorn/prefer-top-level-await": "off",
-
-    "no-console": ["warn", { allow: ["warn", "error"] }],
+    "unicorn/catch-error-name": "off",
 
     "@typescript-eslint/no-misused-promises": [
       "error",
@@ -40,21 +52,22 @@ module.exports = {
         },
       },
     ],
-    "@eslint-react/naming-convention/filename": [
+    "@eslint-react/naming-convention/filename": "off",
+
+    "no-restricted-syntax": [
       "error",
       {
-        rule: "kebab-case",
+        selector: "TSEnumDeclaration",
+        message: "We should not use Enum",
       },
     ],
-
-    "validate-jsx-nesting/no-invalid-jsx-nesting": "error",
 
     "tailwindcss/classnames-order": "off",
   },
 
   settings: {
     tailwindcss: {
-      callees: ["cn", "cva"],
+      callees: ["cn", "cva", "ctx..*"],
     },
   },
 
