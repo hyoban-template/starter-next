@@ -1,10 +1,10 @@
 import "~/styles/globals.css"
 
+import { Provider } from "jotai"
+import { ThemeProvider } from "jotai-dark"
 import { Inter } from "next/font/google"
 
 import { cn } from "~/lib/utils"
-
-import { ThemeProvider } from "./theme-provider"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="zh-Hans" suppressHydrationWarning className="h-full">
       <body className={cn("h-full", inter.className)}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <Provider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </Provider>
       </body>
     </html>
   )
