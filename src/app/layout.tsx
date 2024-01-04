@@ -1,10 +1,11 @@
 import "~/styles/globals.css"
 
 import { Provider } from "jotai"
-import { ThemeProvider } from "jotai-dark"
 import { Inter } from "next/font/google"
 
 import { cn } from "~/lib/utils"
+
+import { ThemeProvider } from "./theme-provider"
 
 const inter = Inter({
   subsets: ["latin"],
