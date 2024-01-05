@@ -1,9 +1,7 @@
 import { iconsPlugin } from "@egoist/tailwindcss-icons"
-import animatePlugin from "tailwindcss-animate"
 
-import type { Config } from "tailwindcss"
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -11,6 +9,7 @@ export default {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -76,5 +75,5 @@ export default {
       },
     },
   },
-  plugins: [animatePlugin, iconsPlugin({ scale: 1.3 })],
-} satisfies Config
+  plugins: [require("tailwindcss-animate"), iconsPlugin({ scale: 1.3 })],
+}
