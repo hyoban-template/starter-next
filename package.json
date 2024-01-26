@@ -8,12 +8,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --max-warnings 0",
+    "lint": "prettier --check . && next lint --max-warnings 0",
     "typecheck": "tsc",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "changelog": "changelogen --output && prettier --write CHANGELOG.md && git add CHANGELOG.md",
-    "release": "bumpp --all --execute \"pnpm changelog\""
+    "release": "release-it"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
@@ -39,6 +37,7 @@
     "@iconify-json/mdi": "^1.1.64",
     "@iconify-json/simple-icons": "^1.1.89",
     "@next/eslint-plugin-next": "^14.1.0",
+    "@release-it/conventional-changelog": "^8.0.1",
     "@types/eslint": "^8.56.2",
     "@types/node": "^20.11.7",
     "@types/react": "^18.2.48",
@@ -46,8 +45,6 @@
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "autoprefixer": "^10.4.17",
-    "bumpp": "^9.3.0",
-    "changelogen": "^0.5.5",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -55,6 +52,7 @@
     "eslint-plugin-unicorn": "^50.0.1",
     "postcss": "^8.4.33",
     "prettier": "^3.2.4",
+    "release-it": "^17.0.3",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3"
