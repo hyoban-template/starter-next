@@ -1,4 +1,3 @@
-/* eslint-env node */
 module.exports = {
   extends: [
     "eslint:recommended",
@@ -18,6 +17,11 @@ module.exports = {
   },
   root: true,
   ignorePatterns: ["**/*.js", "**/*.cjs", "**/*.mjs"],
+  settings: {
+    tailwindcss: {
+      callees: ["cn", "cva", "ctx..*"],
+    },
+  },
   rules: {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
@@ -36,13 +40,6 @@ module.exports = {
 
     "no-console": ["warn", { allow: ["warn", "error"] }],
 
-    "unicorn/prevent-abbreviations": "off",
-    // https://github.com/sindresorhus/meta/discussions/7
-    "unicorn/no-null": "off",
-    // https://github.com/orgs/web-infra-dev/discussions/10
-    "unicorn/prefer-top-level-await": "off",
-    "unicorn/catch-error-name": "off",
-
     "@typescript-eslint/no-misused-promises": [
       "error",
       {
@@ -52,6 +49,15 @@ module.exports = {
         },
       },
     ],
+
+    "unicorn/prevent-abbreviations": "off",
+    // https://github.com/sindresorhus/meta/discussions/7
+    "unicorn/no-null": "off",
+    // https://github.com/orgs/web-infra-dev/discussions/10
+    "unicorn/prefer-top-level-await": "off",
+    "unicorn/catch-error-name": "off",
+    "unicorn/no-array-reduce": "off",
+
     "@eslint-react/naming-convention/filename": "off",
 
     "no-restricted-syntax": [
@@ -64,18 +70,11 @@ module.exports = {
 
     "tailwindcss/classnames-order": "off",
   },
-
-  settings: {
-    tailwindcss: {
-      callees: ["cn", "cva", "ctx..*"],
-    },
-  },
-
   overrides: [
     {
       files: ["*.tsx", "*.ts"],
       excludedFiles: [
-        "src/app/**/{layout,page,loding,not-found,error,global-error,route,template,default}.tsx",
+        "src/app/**/{layout,page,loading,not-found,error,global-error,route,template,default}.tsx",
         "*.config.ts",
       ],
       rules: {
