@@ -69,6 +69,7 @@ module.exports = {
     {
       files: ["*.tsx", "*.ts"],
       excludedFiles: [
+        // https://nextjs.org/docs/getting-started/project-structure#routing-files
         "src/app/**/{layout,page,loading,not-found,error,global-error,route,template,default}.tsx",
         "*.config.ts",
       ],
