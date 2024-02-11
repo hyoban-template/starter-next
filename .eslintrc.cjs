@@ -8,8 +8,10 @@ module.exports = {
     'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:unicorn/recommended',
     'plugin:@stylistic/recommended-extends',
+    // for React
     'plugin:@eslint-react/all-legacy',
     'plugin:react-hooks/recommended',
+    // for Next.js
     'plugin:@next/next/recommended',
   ],
   plugins: ['@typescript-eslint', 'antfu'],
@@ -64,6 +66,7 @@ module.exports = {
     'antfu/no-import-dist': 'error',
     'antfu/no-import-node-modules-by-path': 'error',
 
+    // for React
     '@typescript-eslint/no-misused-promises': [
       'error',
       {
@@ -83,8 +86,9 @@ module.exports = {
       files: ['*.js', '*.jsx', '*.mjs', '*.cjs'],
       extends: ['plugin:@typescript-eslint/disable-type-checked'],
     },
+    // for React
     {
-      files: ['*.tsx', '*.ts'],
+      files: ['*.js', '*.jsx', '*.mjs', '*.cjs', '*.ts', '*.tsx'],
       excludedFiles: [
         // https://nextjs.org/docs/getting-started/project-structure#routing-files
         'src/app/**/{layout,page,loading,not-found,error,global-error,route,template,default}.tsx',
