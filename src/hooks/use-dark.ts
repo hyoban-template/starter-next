@@ -6,11 +6,11 @@ const isDarkAtom = atomDark({
   disableTransitionExclude: [".i-lucide-sun", ".i-lucide-moon"],
 })
 
-export const useDark = () => {
+export function useDark() {
   const [isDark, setIsDark] = useAtom(isDarkAtom)
   return {
     isDark,
-    theme: (isDark ? "dark" : "light") as "dark" | "light",
     toggleDark: setIsDark as () => void,
+    theme: (isDark ? "dark" : "light") as "dark" | "light",
   }
 }
