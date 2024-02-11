@@ -1,3 +1,5 @@
+// ni -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unicorn @stylistic/eslint-plugin eslint-plugin-antfu
+// ni -D @eslint-react/eslint-plugin eslint-plugin-react-hooks @next/eslint-plugin-next
 module.exports = {
   env: {
     node: true,
