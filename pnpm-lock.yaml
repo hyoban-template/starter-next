@@ -61,9 +61,6 @@ devDependencies:
   '@iconify-json/lucide':
     specifier: ^1.1.163
     version: 1.1.163
-  '@iconify-json/mdi':
-    specifier: ^1.1.64
-    version: 1.1.64
   '@iconify-json/simple-icons':
     specifier: ^1.1.90
     version: 1.1.90
@@ -556,12 +553,6 @@ packages:
 
   /@iconify-json/lucide@1.1.163:
     resolution: {integrity: sha512-zZWM3FJfsUk6RQOrh3rd9DEek4QLCndiFGHyC6sRTMZQgCQ3muI3q20OQJ5QlvX2Md87OKcxPLgFiY2+Z/wA0w==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
-  /@iconify-json/mdi@1.1.64:
-    resolution: {integrity: sha512-zGeo5TjhNFAY6FmSDBLAzDO811t77r6v/mDi7CAL9w5eXqKez6bIjk8R9AL/RHIeq44ALP4Ozr4lMqFTkHr7ug==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
