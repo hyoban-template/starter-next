@@ -14,7 +14,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
                 document.documentElement.classList.toggle("dark", !0);
             })();`,
         }}
-      ></script>
+      >
+      </script>
       {children}
     </>
   )

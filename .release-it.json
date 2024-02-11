@@ -14,6 +14,6 @@
   "hooks": {
     "before:init": ["pnpm lint", "pnpm typecheck"],
     "after:bump": "pnpm build",
-    "before:release": "pnpm prettier --write CHANGELOG.md && git add CHANGELOG.md"
+    "before:release": "git add CHANGELOG.md"
   }
 }
