@@ -8,5 +8,9 @@ const isDarkAtom = atomDark({
 
 export const useDark = () => {
   const [isDark, setIsDark] = useAtom(isDarkAtom)
-  return { isDark, toggleDark: setIsDark as () => void }
+  return {
+    isDark,
+    theme: (isDark ? "dark" : "light") as "dark" | "light",
+    toggleDark: setIsDark as () => void,
+  }
 }

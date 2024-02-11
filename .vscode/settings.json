@@ -18,5 +18,6 @@
     "react-day-picker",
     "@radix-ui/*",
     "react-twc"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
