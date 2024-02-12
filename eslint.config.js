@@ -1,3 +1,6 @@
+// Install dependencies
+// ni -D eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin
+
 import gitignore from 'eslint-config-flat-gitignore'
 import js from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
