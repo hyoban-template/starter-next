@@ -31,7 +31,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   root: true,
-  ignorePatterns: ['!.*', '.next', 'node_modules', 'dist', 'output', 'out'],
+  ignorePatterns: ['!.vscode', '!.github', 'node_modules', 'dist', 'output', 'out'],
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-restricted-syntax': [
