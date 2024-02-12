@@ -1,5 +1,5 @@
 {
-  "[javascript][javascriptreact][typescript][typescriptreact][json][jsonc]": {
+  "[javascript][javascriptreact][typescript][typescriptreact][json][jsonc][yaml][github-actions-workflow]": {
     "editor.formatOnSave": false
   },
   "editor.codeActionsOnSave": {
@@ -16,7 +16,9 @@
     "typescript",
     "typescriptreact",
     "json",
-    "jsonc"
+    "jsonc",
+    "yaml",
+    "github-actions-workflow"
   ],
 
   "tailwindCSS.experimental.classRegex": [

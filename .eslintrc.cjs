@@ -1,5 +1,5 @@
 // https://gist.github.com/hyoban/5e2270371d743ddb10b4f427017babc3
-// ni -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unicorn @stylistic/eslint-plugin eslint-plugin-antfu eslint-plugin-jsonc jsonc-eslint-parser
+// ni -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unicorn @stylistic/eslint-plugin eslint-plugin-antfu eslint-plugin-jsonc jsonc-eslint-parser eslint-plugin-yml yaml-eslint-parser
 // ni -D @eslint-react/eslint-plugin eslint-plugin-react-hooks
 // ni -D @next/eslint-plugin-next
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   root: true,
-  ignorePatterns: ['!.*'],
+  ignorePatterns: ['!.*', 'pnpm-lock.yaml', 'yarn.lock', 'package-lock.json'],
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-restricted-syntax': [
@@ -50,7 +50,6 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
 
     '@typescript-eslint/consistent-type-imports': 'error',
-    '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/no-import-type-side-effects': 'error',
 
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
@@ -77,40 +76,56 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
 
-    // for React
-    '@typescript-eslint/no-misused-promises': [
-      'error',
-      {
-        checksVoidReturn: {
-          arguments: false,
-          attributes: false,
-        },
-      },
-    ],
-
     // handled by unicorn/filename-case
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
     '@eslint-react/naming-convention/filename': 'off',
   },
   overrides: [
     {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/consistent-type-exports': 'error',
+
+        // for React
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          {
+            checksVoidReturn: {
+              arguments: false,
+              attributes: false,
+            },
+          },
+        ],
+      },
+    },
+    {
       files: ['*.js', '*.jsx', '*.mjs', '*.cjs', './*.config.ts'],
       extends: ['plugin:@typescript-eslint/disable-type-checked'],
+    },
+    {
+      files: ['*.json', '*.json5', '*.jsonc', '*.yaml', '*.yml'],
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+      rules: {
+        '@typescript-eslint/consistent-type-assertions': 'off',
+      },
     },
     {
       files: ['*.json', '*.json5', '*.jsonc'],
       parser: 'jsonc-eslint-parser',
       extends: [
-        'plugin:@typescript-eslint/disable-type-checked',
         'plugin:jsonc/recommended-with-json',
         'plugin:jsonc/recommended-with-jsonc',
         'plugin:jsonc/recommended-with-json5',
       ],
       rules: {
-        '@typescript-eslint/consistent-type-assertions': 'off',
         'jsonc/auto': 'error',
         'jsonc/no-comments': 'off',
       },
+    },
+    {
+      files: ['*.yaml', '*.yml'],
+      parser: 'yaml-eslint-parser',
+      extends: ['plugin:yml/standard'],
     },
     // for React
     {
