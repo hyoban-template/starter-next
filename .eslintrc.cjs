@@ -1,5 +1,5 @@
 // https://gist.github.com/hyoban/5e2270371d743ddb10b4f427017babc3
-// ni -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unicorn @stylistic/eslint-plugin eslint-plugin-antfu eslint-plugin-jsonc
+// ni -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unicorn @stylistic/eslint-plugin eslint-plugin-antfu eslint-plugin-jsonc jsonc-eslint-parser
 // ni -D @eslint-react/eslint-plugin eslint-plugin-react-hooks
 // ni -D @next/eslint-plugin-next
 module.exports = {
