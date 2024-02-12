@@ -24,7 +24,7 @@ module.exports = {
     // for Next.js
     'plugin:@next/next/recommended',
   ],
-  plugins: ['@typescript-eslint', 'antfu'],
+  plugins: ['@typescript-eslint', 'antfu', 'simple-import-sort'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: true,
@@ -76,6 +76,9 @@ module.exports = {
     'antfu/import-dedupe': 'error',
     'antfu/no-import-dist': 'error',
     'antfu/no-import-node-modules-by-path': 'error',
+
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
 
     // for React
     '@typescript-eslint/no-misused-promises': [
