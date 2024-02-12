@@ -15,9 +15,6 @@ module.exports = {
     'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:unicorn/recommended',
     'plugin:@stylistic/recommended-extends',
-    'plugin:jsonc/recommended-with-json',
-    'plugin:jsonc/recommended-with-jsonc',
-    'plugin:jsonc/recommended-with-json5',
     // for React
     'plugin:@eslint-react/all-legacy',
     'plugin:react-hooks/recommended',
@@ -97,16 +94,20 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.js', '*.jsx', '*.mjs', '*.cjs', '*.json', '*.json5', '*.jsonc', './*.config.ts'],
+      files: ['*.js', '*.jsx', '*.mjs', '*.cjs', './*.config.ts'],
       extends: ['plugin:@typescript-eslint/disable-type-checked'],
-      rules: {
-        '@typescript-eslint/consistent-type-assertions': 'off',
-      },
     },
     {
       files: ['*.json', '*.json5', '*.jsonc'],
       parser: 'jsonc-eslint-parser',
+      extends: [
+        'plugin:@typescript-eslint/disable-type-checked',
+        'plugin:jsonc/recommended-with-json',
+        'plugin:jsonc/recommended-with-jsonc',
+        'plugin:jsonc/recommended-with-json5',
+      ],
       rules: {
+        '@typescript-eslint/consistent-type-assertions': 'off',
         'jsonc/auto': 'error',
         'jsonc/no-comments': 'off',
       },
