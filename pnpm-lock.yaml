@@ -27,8 +27,8 @@ dependencies:
     specifier: ^0.5.0
     version: 0.5.0(jotai@2.6.4)
   lucide-react:
-    specifier: ^0.323.0
-    version: 0.323.0(react@18.2.0)
+    specifier: ^0.325.0
+    version: 0.325.0(react@18.2.0)
   next:
     specifier: ^14.1.0
     version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -56,11 +56,8 @@ devDependencies:
     specifier: ^1.5.3
     version: 1.5.3(eslint@8.56.0)(typescript@5.3.3)
   '@iconify-json/lucide':
-    specifier: ^1.1.163
-    version: 1.1.163
-  '@iconify-json/simple-icons':
-    specifier: ^1.1.90
-    version: 1.1.90
+    specifier: ^1.1.164
+    version: 1.1.164
   '@next/eslint-plugin-next':
     specifier: ^14.1.0
     version: 14.1.0
@@ -106,6 +103,9 @@ devDependencies:
   eslint-plugin-unicorn:
     specifier: ^51.0.1
     version: 51.0.1(eslint@8.56.0)
+  jsonc-eslint-parser:
+    specifier: ^2.4.0
+    version: 2.4.0
   postcss:
     specifier: ^8.4.35
     version: 8.4.35
@@ -376,14 +376,8 @@ packages:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: true
 
-  /@iconify-json/lucide@1.1.163:
-    resolution: {integrity: sha512-zZWM3FJfsUk6RQOrh3rd9DEek4QLCndiFGHyC6sRTMZQgCQ3muI3q20OQJ5QlvX2Md87OKcxPLgFiY2+Z/wA0w==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
-  /@iconify-json/simple-icons@1.1.90:
-    resolution: {integrity: sha512-IYDCQD3VJ5verAwWwMgnbJ6SvPzEqH0SG6JsI2ySuI64d7qVbcJMFycc0kGPfSsi2yAPYHk+tD6Iln17y1MuNA==}
+  /@iconify-json/lucide@1.1.164:
+    resolution: {integrity: sha512-s7pEr9/Uk5Vl8OR2sUF1x8Dyjyn9Gq3b0qwPR6bzhQTED9wB34PjDFVEOPiQhMPTzICYnLzJe21VAM/whKSdPQ==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -3494,8 +3488,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /lucide-react@0.323.0(react@18.2.0):
-    resolution: {integrity: sha512-rTXZFILl2Y4d1SG9p1Mdcf17AcPvPvpc/egFIzUrp7IUy60MUQo3Oi1mu8LGYXUVwuRZYsSMt3csHRW5mAovJg==}
+  /lucide-react@0.325.0(react@18.2.0):
+    resolution: {integrity: sha512-/H6IPtPMQUwXjHTFylCYBq/j8J3AJKG5Uil3mcm1E58wKkCfoKVzJH7toZU3U20wJrL7dP51dNX3yLgAPod+qQ==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
