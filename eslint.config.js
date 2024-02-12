@@ -17,7 +17,10 @@ function createFlatConfig(config) {
 
   const configKeys = Object.keys(config)
   if (configKeys.length === 1 && configKeys[0] === 'ignores')
-    return config
+    return {
+      ...config,
+      name: 'Global ignores',
+    }
 
   if (!config?.files) {
     return {
@@ -37,14 +40,19 @@ export default createFlatConfig([
     strict: false,
   }),
   {
+    name: 'Basic JavaScript rules',
     rules: {
       ...js.configs.recommended.rules,
       'prefer-template': 'error',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
     },
   },
-  stylistic.configs['recommended-flat'],
   {
+    name: 'Stylistic rules for formatting',
+    ...stylistic.configs['recommended-flat'],
+  },
+  {
+    name: 'Antfu rules',
     plugins: {
       antfu: eslintPluginAntfu,
     },
@@ -58,8 +66,12 @@ export default createFlatConfig([
       'antfu/no-import-node-modules-by-path': 'error',
     },
   },
-  eslintPluginUnicorn.configs['flat/recommended'],
   {
+    name: 'Unicorn rules',
+    ...eslintPluginUnicorn.configs['flat/recommended'],
+  },
+  {
+    name: 'Simple import sort',
     plugins: {
       'simple-import-sort': simpleImportSort,
     },
