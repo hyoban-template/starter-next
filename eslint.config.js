@@ -14,6 +14,10 @@ function createFlatConfig(config) {
     return config.map(element => createFlatConfig(element))
   }
 
+  const configKeys = Object.keys(config)
+  if (configKeys.length === 1 && configKeys[0] === 'ignores')
+    return config
+
   if (!config?.files) {
     return {
       ...config,
