@@ -9,7 +9,21 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 
 const GLOB_SRC = '**/*.?([cm])[jt]s?(x)'
 
-export default [
+function createFlatConfig(config) {
+  if (Array.isArray(config)) {
+    return config.map(element => createFlatConfig(element))
+  }
+
+  if (!config?.files) {
+    return {
+      ...config,
+      files: [GLOB_SRC],
+    }
+  }
+  return config
+}
+
+export default createFlatConfig([
   gitignore({
     files: [
       '.gitignore',
@@ -17,10 +31,7 @@ export default [
     ],
     strict: false,
   }),
-  {
-    files: [GLOB_SRC],
-    rules: js.configs.recommended.rules,
-  },
+  js.configs.recommended,
   stylistic.configs['recommended-flat'],
   eslintPluginUnicorn.configs['flat/recommended'],
   {
@@ -32,4 +43,4 @@ export default [
       'simple-import-sort/exports': 'error',
     },
   },
-]
+])
