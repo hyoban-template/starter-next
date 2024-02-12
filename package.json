@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc",
     "release": "release-it"
   },
@@ -44,6 +44,7 @@
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-plugin-antfu": "^2.1.2",
+    "eslint-plugin-jsonc": "^2.13.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unicorn": "^51.0.1",
     "postcss": "^8.4.35",
