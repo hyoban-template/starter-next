@@ -5,8 +5,7 @@ import js from '@eslint/js'
 import eslintReact from '@eslint-react/eslint-plugin'
 import eslintPluginNext from '@next/eslint-plugin-next'
 import stylistic from '@stylistic/eslint-plugin'
-import { defu } from 'defu'
-import gitignore from 'eslint-config-flat-gitignore'
+import { config } from 'eslint-flat-config'
 import eslintPluginAntfu from 'eslint-plugin-antfu'
 import reactHooks from 'eslint-plugin-react-hooks'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
@@ -15,75 +14,13 @@ import tseslint from 'typescript-eslint'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const GLOB_SRC = '**/*.?([cm])[jt]s?(x)'
 const GLOB_JS = '**/*.?([cm])js'
 const GLOB_JSX = '**/*.?([cm])jsx'
 
-const GLOB_EXCLUDE = [
-  '**/node_modules',
-  '**/dist',
-  '**/package-lock.json',
-  '**/yarn.lock',
-  '**/pnpm-lock.yaml',
-  '**/bun.lockb',
+export default config(
+  {},
 
-  '**/output',
-  '**/coverage',
-  '**/temp',
-  '**/.temp',
-  '**/tmp',
-  '**/.tmp',
-  '**/.history',
-  '**/.vitepress/cache',
-  '**/.nuxt',
-  '**/.next',
-  '**/.vercel',
-  '**/.changeset',
-  '**/.idea',
-  '**/.cache',
-  '**/.output',
-  '**/.vite-inspect',
-
-  '**/CHANGELOG*.md',
-  '**/*.min.*',
-  '**/LICENSE*',
-  '**/__snapshots__',
-  '**/auto-import?(s).d.ts',
-  '**/components.d.ts',
-]
-
-function createFlatConfig(config) {
-  if (Array.isArray(config)) {
-    return config.map(element => createFlatConfig(element))
-  }
-
-  const configKeys = Object.keys(config)
-  if (configKeys.length === 1 && configKeys[0] === 'ignores')
-    return config
-
-  if (!config?.files) {
-    return {
-      ...config,
-      files: [GLOB_SRC],
-    }
-  }
-  return config
-}
-
-export default createFlatConfig([
-  defu(
-    {
-      ignores: GLOB_EXCLUDE,
-    },
-    gitignore({
-      files: [
-        '.gitignore',
-        '.eslintignore',
-      ],
-      strict: false,
-    }),
-  ),
-  defu(
+  [
     {
       name: 'Basic JavaScript rules',
       rules: {
@@ -92,13 +29,13 @@ export default createFlatConfig([
       },
     },
     js.configs.recommended,
-  ),
-  defu(
+  ],
+  [
     {
       name: 'Stylistic rules for formatting',
     },
     stylistic.configs['recommended-flat'],
-  ),
+  ],
   {
     name: 'Antfu rules',
     plugins: {
@@ -114,7 +51,7 @@ export default createFlatConfig([
       'antfu/no-import-node-modules-by-path': 'error',
     },
   },
-  defu(
+  [
     {
       name: 'Unicorn rules',
       rules: {
@@ -129,7 +66,7 @@ export default createFlatConfig([
       },
     },
     eslintPluginUnicorn.configs['flat/recommended'],
-  ),
+  ],
   {
     name: 'Simple import sort',
     plugins: {
@@ -140,7 +77,7 @@ export default createFlatConfig([
       'simple-import-sort/exports': 'error',
     },
   },
-  defu(
+  [
     {
       name: 'TypeScript rules',
       languageOptions: {
@@ -189,15 +126,15 @@ export default createFlatConfig([
     },
     ...tseslint.configs.stylisticTypeChecked,
     ...tseslint.configs.recommendedTypeChecked,
-  ),
-  defu(
+  ],
+  [
     {
       name: 'Disable type check rules for JavaScript files',
       files: [GLOB_JS, GLOB_JSX],
     },
     tseslint.configs.disableTypeChecked,
-  ),
-  defu(
+  ],
+  [
     {
       name: 'React rules',
       rules: {
@@ -207,7 +144,7 @@ export default createFlatConfig([
       },
     },
     eslintReact.configs.all,
-  ),
+  ],
   {
     name: 'React hooks rules',
     plugins: {
@@ -222,4 +159,4 @@ export default createFlatConfig([
     },
     rules: eslintPluginNext.configs.recommended.rules,
   },
-])
+)

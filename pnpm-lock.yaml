@@ -82,15 +82,12 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.17
     version: 10.4.17(postcss@8.4.35)
-  defu:
-    specifier: ^6.1.4
-    version: 6.1.4
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
-  eslint-config-flat-gitignore:
-    specifier: ^0.1.3
-    version: 0.1.3
+  eslint-flat-config:
+    specifier: ^0.1.0
+    version: 0.1.0
   eslint-plugin-antfu:
     specifier: ^2.1.2
     version: 2.1.2(eslint@8.56.0)
@@ -2131,6 +2128,13 @@ packages:
     dependencies:
       find-up: 7.0.0
       parse-gitignore: 2.0.0
+    dev: true
+
+  /eslint-flat-config@0.1.0:
+    resolution: {integrity: sha512-TSQB+H9HbGdPYGOShZD8TnUgmj+MjKPyw1LXL4Vqj+zcaVtfOjZnevolg91NsUZa0BohbmfGWs0z+pxJ9iSl7g==}
+    dependencies:
+      defu: 6.1.4
+      eslint-config-flat-gitignore: 0.1.3
     dev: true
 
   /eslint-plugin-antfu@2.1.2(eslint@8.56.0):
