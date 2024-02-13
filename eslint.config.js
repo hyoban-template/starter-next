@@ -1,5 +1,5 @@
 // Install dependencies
-// ni -D defu eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint @eslint-react/eslint-plugin
+// ni -D defu eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint @eslint-react/eslint-plugin eslint-plugin-react-hooks
 
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -10,6 +10,7 @@ import stylistic from '@stylistic/eslint-plugin'
 import { defu } from 'defu'
 import gitignore from 'eslint-config-flat-gitignore'
 import eslintPluginAntfu from 'eslint-plugin-antfu'
+import reactHooks from 'eslint-plugin-react-hooks'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import tseslint from 'typescript-eslint'
@@ -175,4 +176,11 @@ export default createFlatConfig([
     },
     eslintReact.configs.all,
   ),
+  {
+    name: 'React hooks rules',
+    plugins: {
+      'react-hooks': reactHooks,
+    },
+    rules: reactHooks.configs.recommended.rules,
+  },
 ])
