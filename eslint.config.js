@@ -1,7 +1,7 @@
+// @ts-check
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import js from '@eslint/js'
 import eslintReact from '@eslint-react/eslint-plugin'
 import eslintPluginNext from '@next/eslint-plugin-next'
 import stylistic from '@stylistic/eslint-plugin'
@@ -19,23 +19,16 @@ const GLOB_TS = '**/*.?([cm])ts'
 const GLOB_TSX = '**/*.?([cm])tsx'
 
 export default config(
-  {},
-  [
-    {
-      rules: {
-        // deprecated rules
-        'no-extra-semi': 'off',
-        'no-mixed-spaces-and-tabs': 'off',
-
-        'prefer-template': 'error',
-        'no-console': ['warn', { allow: ['warn', 'error'] }],
-      },
+  {
+    rules: {
+      'prefer-template': 'error',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
     },
-    js.configs.recommended,
-  ],
+  },
   stylistic.configs['recommended-flat'],
   {
     plugins: {
+      // @ts-ignore
       antfu: eslintPluginAntfu,
     },
     rules: {
