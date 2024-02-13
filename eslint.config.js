@@ -1,11 +1,12 @@
 // Install dependencies
-// ni -D defu eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint @eslint-react/eslint-plugin eslint-plugin-react-hooks
+// ni -D defu eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint @eslint-react/eslint-plugin eslint-plugin-react-hooks @next/eslint-plugin-next
 
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import js from '@eslint/js'
 import eslintReact from '@eslint-react/eslint-plugin'
+import eslintPluginNext from '@next/eslint-plugin-next'
 import stylistic from '@stylistic/eslint-plugin'
 import { defu } from 'defu'
 import gitignore from 'eslint-config-flat-gitignore'
@@ -182,5 +183,12 @@ export default createFlatConfig([
       'react-hooks': reactHooks,
     },
     rules: reactHooks.configs.recommended.rules,
+  },
+  {
+    name: 'Next.js rules',
+    plugins: {
+      '@next/next': eslintPluginNext,
+    },
+    rules: eslintPluginNext.configs.recommended.rules,
   },
 ])
