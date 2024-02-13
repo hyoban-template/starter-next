@@ -19,10 +19,8 @@ const GLOB_JSX = '**/*.?([cm])jsx'
 
 export default config(
   {},
-
   [
     {
-      name: 'Basic JavaScript rules',
       rules: {
         'prefer-template': 'error',
         'no-console': ['warn', { allow: ['warn', 'error'] }],
@@ -30,14 +28,8 @@ export default config(
     },
     js.configs.recommended,
   ],
-  [
-    {
-      name: 'Stylistic rules for formatting',
-    },
-    stylistic.configs['recommended-flat'],
-  ],
+  stylistic.configs['recommended-flat'],
   {
-    name: 'Antfu rules',
     plugins: {
       antfu: eslintPluginAntfu,
     },
@@ -53,7 +45,6 @@ export default config(
   },
   [
     {
-      name: 'Unicorn rules',
       rules: {
         // we should not restrict how we name our variables
         'unicorn/prevent-abbreviations': 'off',
@@ -68,7 +59,6 @@ export default config(
     eslintPluginUnicorn.configs['flat/recommended'],
   ],
   {
-    name: 'Simple import sort',
     plugins: {
       'simple-import-sort': simpleImportSort,
     },
@@ -79,7 +69,6 @@ export default config(
   },
   [
     {
-      name: 'TypeScript rules',
       languageOptions: {
         parserOptions: {
           project: true,
@@ -136,7 +125,6 @@ export default config(
   ],
   [
     {
-      name: 'React rules',
       rules: {
         // handled by unicorn/filename-case
         // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
@@ -146,14 +134,12 @@ export default config(
     eslintReact.configs.all,
   ],
   {
-    name: 'React hooks rules',
     plugins: {
       'react-hooks': reactHooks,
     },
     rules: reactHooks.configs.recommended.rules,
   },
   {
-    name: 'Next.js rules',
     plugins: {
       '@next/next': eslintPluginNext,
     },

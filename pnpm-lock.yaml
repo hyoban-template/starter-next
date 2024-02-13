@@ -27,8 +27,8 @@ dependencies:
     specifier: ^0.5.0
     version: 0.5.0(jotai@2.6.4)
   lucide-react:
-    specifier: ^0.325.0
-    version: 0.325.0(react@18.2.0)
+    specifier: ^0.330.0
+    version: 0.330.0(react@18.2.0)
   next:
     specifier: ^14.1.0
     version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^8.56.0
     version: 8.56.0
   eslint-flat-config:
-    specifier: ^0.1.0
-    version: 0.1.0
+    specifier: ^0.2.0
+    version: 0.2.0
   eslint-plugin-antfu:
     specifier: ^2.1.2
     version: 2.1.2(eslint@8.56.0)
@@ -2130,8 +2130,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-flat-config@0.1.0:
-    resolution: {integrity: sha512-TSQB+H9HbGdPYGOShZD8TnUgmj+MjKPyw1LXL4Vqj+zcaVtfOjZnevolg91NsUZa0BohbmfGWs0z+pxJ9iSl7g==}
+  /eslint-flat-config@0.2.0:
+    resolution: {integrity: sha512-7gDZJtXeL/QOCal4Efo1yuXDTd4hL4vEy8zhmfH5Y+qygOSjBu/KWpfmFiSb19b7Vh750oS0dkQlwDljucfqQg==}
     dependencies:
       defu: 6.1.4
       eslint-config-flat-gitignore: 0.1.3
@@ -3579,8 +3579,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /lucide-react@0.325.0(react@18.2.0):
-    resolution: {integrity: sha512-/H6IPtPMQUwXjHTFylCYBq/j8J3AJKG5Uil3mcm1E58wKkCfoKVzJH7toZU3U20wJrL7dP51dNX3yLgAPod+qQ==}
+  /lucide-react@0.330.0(react@18.2.0):
+    resolution: {integrity: sha512-CQwY+Fpbt2kxCoVhuN0RCZDCYlbYnqB870Bl/vIQf3ER/cnDDQ6moLmEkguRyruAUGd4j3Lc4mtnJosXnqHheA==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
