@@ -118,13 +118,6 @@ export default config(
   ],
   [
     {
-      name: 'Disable type check rules for JavaScript files',
-      files: [GLOB_JS, GLOB_JSX],
-    },
-    tseslint.configs.disableTypeChecked,
-  ],
-  [
-    {
       rules: {
         // handled by unicorn/filename-case
         // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
@@ -147,4 +140,15 @@ export default config(
     },
     rules: eslintPluginNext.configs.recommended.rules,
   },
+  [
+    {
+      name: 'Disable type check rules for JavaScript files',
+      files: [GLOB_JS, GLOB_JSX],
+      rules: {
+        // Requires type information
+        '@eslint-react/no-leaked-conditional-rendering': 'off',
+      },
+    },
+    tseslint.configs.disableTypeChecked,
+  ],
 )
