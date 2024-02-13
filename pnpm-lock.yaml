@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^8.56.0
     version: 8.56.0
   eslint-flat-config:
-    specifier: ^0.4.2
-    version: 0.4.2(eslint@8.56.0)(typescript@5.3.3)
+    specifier: ^1.0.0
+    version: 1.0.0(eslint@8.56.0)(typescript@5.3.3)
   eslint-plugin-antfu:
     specifier: ^2.1.2
     version: 2.1.2(eslint@8.56.0)
@@ -2144,8 +2144,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-flat-config@0.4.2(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-Q45LDxyqE7DbHwsQREQceQeLlMf3raRbEUalaFpPlNGfeGEonQxmVp3m9L0rMXG2KNU1AMWyNN5xXUSWuecBvA==}
+  /eslint-flat-config@1.0.0(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-jMcWS0Ub0v6/bz+7XNmAnjK7aR3CwtpC8AbzG0VoTmTbv07E0J2LCA6W2pSRcn1htLAAAMY26LxOqwVvVbCQ9w==}
     dependencies:
       '@eslint/js': 8.56.0
       '@typescript-eslint/utils': 7.0.1(eslint@8.56.0)(typescript@5.3.3)
