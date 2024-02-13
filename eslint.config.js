@@ -128,9 +128,7 @@ export default config(
     {
       files: [GLOB_TS, GLOB_TSX],
       rules: {
-        // handled by unicorn/filename-case
-        // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
-        '@eslint-react/naming-convention/filename': 'off',
+        '@eslint-react/naming-convention/filename': ['warn', 'kebab-case'],
         // Requires type information
         '@eslint-react/no-leaked-conditional-rendering': 'error',
       },
