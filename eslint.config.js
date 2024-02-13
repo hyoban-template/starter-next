@@ -1,11 +1,12 @@
 // Install dependencies
-// ni -D eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint
+// ni -D defu eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint
 
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import js from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
+import { defu } from 'defu'
 import gitignore from 'eslint-config-flat-gitignore'
 import eslintPluginAntfu from 'eslint-plugin-antfu'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
@@ -48,18 +49,22 @@ export default createFlatConfig([
     ],
     strict: false,
   }),
-  {
-    name: 'Basic JavaScript rules',
-    rules: {
-      ...js.configs.recommended.rules,
-      'prefer-template': 'error',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+  defu(
+    {
+      name: 'Basic JavaScript rules',
+      rules: {
+        'prefer-template': 'error',
+        'no-console': ['warn', { allow: ['warn', 'error'] }],
+      },
     },
-  },
-  {
-    name: 'Stylistic rules for formatting',
-    ...stylistic.configs['recommended-flat'],
-  },
+    js.configs.recommended,
+  ),
+  defu(
+    {
+      name: 'Stylistic rules for formatting',
+    },
+    stylistic.configs['recommended-flat'],
+  ),
   {
     name: 'Antfu rules',
     plugins: {
@@ -75,10 +80,22 @@ export default createFlatConfig([
       'antfu/no-import-node-modules-by-path': 'error',
     },
   },
-  {
-    name: 'Unicorn rules',
-    ...eslintPluginUnicorn.configs['flat/recommended'],
-  },
+  defu(
+    {
+      name: 'Unicorn rules',
+      rules: {
+        // we should not restrict how we name our variables
+        'unicorn/prevent-abbreviations': 'off',
+        'unicorn/catch-error-name': 'off',
+        // https://github.com/sindresorhus/meta/discussions/7
+        'unicorn/no-null': 'off',
+        // https://github.com/orgs/web-infra-dev/discussions/10
+        'unicorn/prefer-top-level-await': 'off',
+        'unicorn/no-array-reduce': 'off',
+      },
+    },
+    eslintPluginUnicorn.configs['flat/recommended'],
+  ),
   {
     name: 'Simple import sort',
     plugins: {
@@ -89,18 +106,47 @@ export default createFlatConfig([
       'simple-import-sort/exports': 'error',
     },
   },
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
-  {
-    languageOptions: {
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: __dirname,
+  defu(
+    {
+      name: 'TypeScript rules',
+      languageOptions: {
+        parserOptions: {
+          project: true,
+          tsconfigRootDir: __dirname,
+        },
+      },
+      rules: {
+        'no-restricted-syntax': [
+          'error',
+          {
+            selector: 'TSEnumDeclaration',
+            message: 'We should not use Enum',
+          },
+        ],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+          },
+        ],
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/no-import-type-side-effects': 'error',
+        '@typescript-eslint/consistent-type-exports': 'error',
+        '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+        '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       },
     },
-  },
-  {
-    files: [GLOB_JS, GLOB_JSX],
-    ...tseslint.configs.disableTypeChecked,
-  },
+    ...tseslint.configs.stylisticTypeChecked,
+    ...tseslint.configs.recommendedTypeChecked,
+  ),
+  defu(
+    {
+      name: 'Disable type check rules for JavaScript files',
+      files: [GLOB_JS, GLOB_JSX],
+    },
+    tseslint.configs.disableTypeChecked,
+  ),
 ])
