@@ -122,7 +122,7 @@ export default config(
       },
     },
     ...tseslint.configs.stylisticTypeChecked,
-    ...tseslint.configs.recommendedTypeChecked,
+    ...tseslint.configs.strictTypeChecked,
   ],
   [
     {
