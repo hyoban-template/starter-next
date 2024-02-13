@@ -15,15 +15,16 @@ import tseslint from 'typescript-eslint'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const GLOB_SRC = '**/*.?([cm])[jt]s?(x)'
-const GLOB_JS = '**/*.?([cm])js'
-const GLOB_JSX = '**/*.?([cm])jsx'
+const GLOB_TS = '**/*.?([cm])ts'
+const GLOB_TSX = '**/*.?([cm])tsx'
 
 export default config(
   {},
   [
     {
       rules: {
+        'no-extra-semi': 'off',
+        'no-mixed-spaces-and-tabs': 'off',
         'prefer-template': 'error',
         'no-console': ['warn', { allow: ['warn', 'error'] }],
       },
@@ -76,7 +77,6 @@ export default config(
   },
   [
     {
-      files: [GLOB_SRC],
       languageOptions: {
         parserOptions: {
           project: true,
@@ -126,6 +126,7 @@ export default config(
   ],
   [
     {
+      files: [GLOB_TS, GLOB_TSX],
       rules: {
         // handled by unicorn/filename-case
         // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
@@ -148,15 +149,4 @@ export default config(
     },
     rules: eslintPluginNext.configs.recommended.rules,
   },
-  [
-    {
-      name: 'Disable type check rules for JavaScript files',
-      files: [GLOB_JS, GLOB_JSX],
-      rules: {
-        // Requires type information
-        '@eslint-react/no-leaked-conditional-rendering': 'off',
-      },
-    },
-    tseslint.configs.disableTypeChecked,
-  ],
 )
