@@ -23,6 +23,39 @@ export const GLOB_SRC = '**/*.?([cm])[jt]s?(x)'
 export const GLOB_JS = '**/*.?([cm])js'
 export const GLOB_JSX = '**/*.?([cm])jsx'
 
+export const GLOB_EXCLUDE = [
+  '**/node_modules',
+  '**/dist',
+  '**/package-lock.json',
+  '**/yarn.lock',
+  '**/pnpm-lock.yaml',
+  '**/bun.lockb',
+
+  '**/output',
+  '**/coverage',
+  '**/temp',
+  '**/.temp',
+  '**/tmp',
+  '**/.tmp',
+  '**/.history',
+  '**/.vitepress/cache',
+  '**/.nuxt',
+  '**/.next',
+  '**/.vercel',
+  '**/.changeset',
+  '**/.idea',
+  '**/.cache',
+  '**/.output',
+  '**/.vite-inspect',
+
+  '**/CHANGELOG*.md',
+  '**/*.min.*',
+  '**/LICENSE*',
+  '**/__snapshots__',
+  '**/auto-import?(s).d.ts',
+  '**/components.d.ts',
+]
+
 function createFlatConfig(config) {
   if (Array.isArray(config)) {
     return config.map(element => createFlatConfig(element))
@@ -45,13 +78,18 @@ function createFlatConfig(config) {
 }
 
 export default createFlatConfig([
-  gitignore({
-    files: [
-      '.gitignore',
-      '.eslintignore',
-    ],
-    strict: false,
-  }),
+  defu(
+    {
+      ignores: GLOB_EXCLUDE,
+    },
+    gitignore({
+      files: [
+        '.gitignore',
+        '.eslintignore',
+      ],
+      strict: false,
+    }),
+  ),
   defu(
     {
       name: 'Basic JavaScript rules',
