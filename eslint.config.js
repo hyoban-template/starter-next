@@ -18,12 +18,11 @@ import tseslint from 'typescript-eslint'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-export const GLOB_SRC_EXT = '?([cm])[jt]s?(x)'
-export const GLOB_SRC = '**/*.?([cm])[jt]s?(x)'
-export const GLOB_JS = '**/*.?([cm])js'
-export const GLOB_JSX = '**/*.?([cm])jsx'
+const GLOB_SRC = '**/*.?([cm])[jt]s?(x)'
+const GLOB_JS = '**/*.?([cm])js'
+const GLOB_JSX = '**/*.?([cm])jsx'
 
-export const GLOB_EXCLUDE = [
+const GLOB_EXCLUDE = [
   '**/node_modules',
   '**/dist',
   '**/package-lock.json',
