@@ -1,10 +1,11 @@
 // Install dependencies
-// ni -D defu eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint
+// ni -D defu eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint @eslint-react/eslint-plugin
 
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import js from '@eslint/js'
+import eslintReact from '@eslint-react/eslint-plugin'
 import stylistic from '@stylistic/eslint-plugin'
 import { defu } from 'defu'
 import gitignore from 'eslint-config-flat-gitignore'
@@ -123,6 +124,7 @@ export default createFlatConfig([
             message: 'We should not use Enum',
           },
         ],
+
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': [
           'error',
@@ -131,12 +133,25 @@ export default createFlatConfig([
             varsIgnorePattern: '^_',
           },
         ],
+
         '@typescript-eslint/no-non-null-assertion': 'off',
+
         '@typescript-eslint/consistent-type-imports': 'error',
         '@typescript-eslint/no-import-type-side-effects': 'error',
         '@typescript-eslint/consistent-type-exports': 'error',
+
         '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
         '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          {
+            checksVoidReturn: {
+              arguments: false,
+              attributes: false,
+            },
+          },
+        ],
       },
     },
     ...tseslint.configs.stylisticTypeChecked,
@@ -148,5 +163,16 @@ export default createFlatConfig([
       files: [GLOB_JS, GLOB_JSX],
     },
     tseslint.configs.disableTypeChecked,
+  ),
+  defu(
+    {
+      name: 'React rules',
+      rules: {
+        // handled by unicorn/filename-case
+        // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
+        '@eslint-react/naming-convention/filename': 'off',
+      },
+    },
+    eslintReact.configs.all,
   ),
 ])
