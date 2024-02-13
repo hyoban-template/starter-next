@@ -23,8 +23,10 @@ export default config(
   [
     {
       rules: {
+        // deprecated rules
         'no-extra-semi': 'off',
         'no-mixed-spaces-and-tabs': 'off',
+
         'prefer-template': 'error',
         'no-console': ['warn', { allow: ['warn', 'error'] }],
       },
