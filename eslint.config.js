@@ -1,6 +1,3 @@
-// Install dependencies
-// ni -D defu eslint eslint-config-flat-gitignore @eslint/js @stylistic/eslint-plugin eslint-plugin-unicorn eslint-plugin-simple-import-sort eslint-plugin-antfu typescript-eslint @eslint-react/eslint-plugin eslint-plugin-react-hooks @next/eslint-plugin-next
-
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -62,10 +59,7 @@ function createFlatConfig(config) {
 
   const configKeys = Object.keys(config)
   if (configKeys.length === 1 && configKeys[0] === 'ignores')
-    return {
-      ...config,
-      name: 'Global ignores',
-    }
+    return config
 
   if (!config?.files) {
     return {
