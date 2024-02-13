@@ -129,6 +129,8 @@ export default config(
         // handled by unicorn/filename-case
         // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
         '@eslint-react/naming-convention/filename': 'off',
+        // Requires type information
+        '@eslint-react/no-leaked-conditional-rendering': 'error',
       },
     },
     eslintReact.configs.all,

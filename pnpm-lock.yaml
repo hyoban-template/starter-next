@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^8.56.0
     version: 8.56.0
   eslint-flat-config:
-    specifier: ^0.2.0
-    version: 0.2.0
+    specifier: ^0.2.1
+    version: 0.2.1
   eslint-plugin-antfu:
     specifier: ^2.1.2
     version: 2.1.2(eslint@8.56.0)
@@ -2130,8 +2130,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-flat-config@0.2.0:
-    resolution: {integrity: sha512-7gDZJtXeL/QOCal4Efo1yuXDTd4hL4vEy8zhmfH5Y+qygOSjBu/KWpfmFiSb19b7Vh750oS0dkQlwDljucfqQg==}
+  /eslint-flat-config@0.2.1:
+    resolution: {integrity: sha512-j+qjhPDubrUaCDahxmDW6rGcj7TtjezCPVSgvz671U2K/RbJp1CbQ1cHbGAhIFXO6tBfbyrz0ZHLpoPm95p3eQ==}
     dependencies:
       defu: 6.1.4
       eslint-config-flat-gitignore: 0.1.3
