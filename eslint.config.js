@@ -14,6 +14,7 @@ import tseslint from 'typescript-eslint'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
+const GLOB_SRC = '**/*.?([cm])[jt]s?(x)'
 const GLOB_JS = '**/*.?([cm])js'
 const GLOB_JSX = '**/*.?([cm])jsx'
 
@@ -69,6 +70,7 @@ export default config(
   },
   [
     {
+      files: [GLOB_SRC],
       languageOptions: {
         parserOptions: {
           project: true,
