@@ -7,6 +7,7 @@ import eslintPluginNext from '@next/eslint-plugin-next'
 import stylistic from '@stylistic/eslint-plugin'
 import { config } from 'eslint-flat-config'
 import eslintPluginAntfu from 'eslint-plugin-antfu'
+import * as eslintPluginImport from 'eslint-plugin-import'
 import reactHooks from 'eslint-plugin-react-hooks'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
@@ -38,10 +39,6 @@ export default config(
       'antfu/consistent-list-newline': 'error',
       'antfu/if-newline': 'error',
       'antfu/top-level-function': 'error',
-
-      'antfu/import-dedupe': 'error',
-      'antfu/no-import-dist': 'error',
-      'antfu/no-import-node-modules-by-path': 'error',
     },
   },
   [
@@ -60,12 +57,21 @@ export default config(
     eslintPluginUnicorn.configs['flat/recommended'],
   ],
   {
+    name: 'Import sort',
     plugins: {
       'simple-import-sort': simpleImportSort,
+      'import': eslintPluginImport,
     },
     rules: {
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
+      'import/first': 'error',
+      'import/newline-after-import': 'error',
+      'import/no-duplicates': 'error',
+      'antfu/import-dedupe': 'error',
+
+      'antfu/no-import-dist': 'error',
+      'antfu/no-import-node-modules-by-path': 'error',
     },
   },
   [
