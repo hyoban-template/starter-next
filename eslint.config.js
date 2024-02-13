@@ -48,10 +48,8 @@ export default config(
         'unicorn/no-null': 'off',
         // https://github.com/orgs/web-infra-dev/discussions/10
         'unicorn/prefer-top-level-await': 'off',
-        'unicorn/no-array-reduce': 'off',
       },
     },
-
   ],
   {
     name: 'Import sort',
@@ -119,7 +117,6 @@ export default config(
         ],
       },
     },
-
   ],
   [
     eslintReact.configs.all,
