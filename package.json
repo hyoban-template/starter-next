@@ -18,9 +18,9 @@
     },
     "hooks": {
       "before:init": [
-        "pnpm lint",
-        "pnpm typecheck",
-        "pnpm test -- run"
+        "pnpm run lint",
+        "pnpm run typecheck",
+        "pnpm run build"
       ]
     }
   },
