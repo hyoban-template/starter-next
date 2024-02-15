@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^8.56.0
     version: 8.56.0
   eslint-config-hyoban:
-    specifier: ^0.1.1
-    version: 0.1.1(@eslint-react/eslint-plugin@1.5.3)(@next/eslint-plugin-next@14.1.0)(@typescript-eslint/parser@7.0.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.56.0)(typescript@5.3.3)
+    specifier: ^0.1.3
+    version: 0.1.3(@eslint-react/eslint-plugin@1.5.3)(@next/eslint-plugin-next@14.1.0)(@typescript-eslint/parser@7.0.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.56.0)(typescript@5.3.3)
   eslint-plugin-react-hooks:
     specifier: ^4.6.0
     version: 4.6.0(eslint@8.56.0)
@@ -983,7 +983,7 @@ packages:
       is-glob: 4.0.3
       minimatch: 9.0.3
       semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.3.3)
+      ts-api-utils: 1.2.1(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -1898,8 +1898,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-hyoban@0.1.1(@eslint-react/eslint-plugin@1.5.3)(@next/eslint-plugin-next@14.1.0)(@typescript-eslint/parser@7.0.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-ho2glPtlbubFTdzjsFle3MKw4WazrD8bphOJsw0AkRv08gfy0Jug1lcvW0LVyexWBBXAH633nJtJ2MDcTFujkg==}
+  /eslint-config-hyoban@0.1.3(@eslint-react/eslint-plugin@1.5.3)(@next/eslint-plugin-next@14.1.0)(@typescript-eslint/parser@7.0.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-7vXfnFWPP+VW6AXHRVaTHfdNTC89kLz+odeuFmCzWywl0MgrPcTGieY3ia4WOH9v0GujrM+7bLhn3SrctotflQ==}
     peerDependencies:
       '@eslint-react/eslint-plugin': '>=1.5.3'
       '@next/eslint-plugin-next': '>=14.1.0'
@@ -1919,7 +1919,7 @@ packages:
       '@next/eslint-plugin-next': 14.1.0
       '@stylistic/eslint-plugin': 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       eslint: 8.56.0
-      eslint-flat-config: 1.0.4(eslint@8.56.0)(typescript@5.3.3)
+      eslint-flat-config: 1.1.6(eslint@8.56.0)(typescript@5.3.3)
       eslint-plugin-antfu: 2.1.2(eslint@8.56.0)
       eslint-plugin-import: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.56.0)
@@ -1936,8 +1936,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-flat-config@1.0.4(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-ngZCKLKZST2cl+Gjd35GzhdtdJbtRFtAAPGCClUgiehRZ6aDrRgTFfkLMeWL/xKWEZhVnKDR2PJoJF4avG0YxA==}
+  /eslint-flat-config@1.1.6(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-lVda9GzTSLZg2Z943E9UaAiBFK14iKJwUHCf6EkSg5ljBlmm+wtX0T09KXGrL38dCGmMsM7gakiI+LfXJf6ghA==}
     peerDependencies:
       eslint: ^8.56.0
     dependencies:
@@ -4786,15 +4786,6 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
-    dev: true
-
-  /ts-api-utils@1.0.3(typescript@5.3.3):
-    resolution: {integrity: sha512-wNMeqtMz5NtwpT/UZGY5alT+VoKdSsOOP/kqHFcUW1P/VRhH2wJ48+DN2WwUliNbQ976ETwDL0Ifd2VVvgonvg==}
-    engines: {node: '>=16.13.0'}
-    peerDependencies:
-      typescript: '>=4.2.0'
-    dependencies:
-      typescript: 5.3.3
     dev: true
 
   /ts-api-utils@1.2.1(typescript@5.3.3):
