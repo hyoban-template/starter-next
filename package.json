@@ -32,7 +32,7 @@
     "jotai": "^2.6.4",
     "jotai-dark": "^0.2.4",
     "jotai-effect": "^0.5.0",
-    "lucide-react": "^0.330.0",
+    "lucide-react": "^0.331.0",
     "next": "^14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
