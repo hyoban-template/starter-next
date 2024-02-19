@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^8.4.35
     version: 8.4.35
   release-it:
-    specifier: ^17.0.5
-    version: 17.0.5(typescript@5.3.3)
+    specifier: ^17.1.1
+    version: 17.1.1(typescript@5.3.3)
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -1065,7 +1065,7 @@ packages:
       '@typescript-eslint/types': 7.0.1
       '@typescript-eslint/typescript-estree': 7.0.1(typescript@5.3.3)
       eslint: 8.56.0
-      semver: 7.5.4
+      semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -4316,8 +4316,8 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /release-it@17.0.5(typescript@5.3.3):
-    resolution: {integrity: sha512-97FcBu/2IjPd4qMvliZSnavpCO0+BWi8lZr+BgVJTXs6ihX8HLPucYR5RsgUUcZoGKj3beO8cunrsMuvEWTzGQ==}
+  /release-it@17.1.1(typescript@5.3.3):
+    resolution: {integrity: sha512-b+4Tu2eb5f2wIdIe5E9hre0evbMQrXp/kRq0natHsHYJVqu1Bd4/h2a+swFi0faGmC3cJdB16uYR6LscG9SchQ==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -4480,14 +4480,6 @@ packages:
   /semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
-    dev: true
-
-  /semver@7.5.4:
-    resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
     dev: true
 
   /semver@7.6.0:

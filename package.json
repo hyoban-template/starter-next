@@ -53,7 +53,7 @@
     "eslint-config-hyoban": "^0.1.9",
     "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.35",
-    "release-it": "^17.0.5",
+    "release-it": "^17.1.1",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3"
