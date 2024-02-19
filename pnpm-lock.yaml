@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^8.4.35
     version: 8.4.35
   release-it:
-    specifier: ^17.0.5
-    version: 17.0.5(typescript@5.3.3)
+    specifier: ^17.1.1
+    version: 17.1.1(typescript@5.3.3)
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -4316,8 +4316,8 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /release-it@17.0.5(typescript@5.3.3):
-    resolution: {integrity: sha512-97FcBu/2IjPd4qMvliZSnavpCO0+BWi8lZr+BgVJTXs6ihX8HLPucYR5RsgUUcZoGKj3beO8cunrsMuvEWTzGQ==}
+  /release-it@17.1.1(typescript@5.3.3):
+    resolution: {integrity: sha512-b+4Tu2eb5f2wIdIe5E9hre0evbMQrXp/kRq0natHsHYJVqu1Bd4/h2a+swFi0faGmC3cJdB16uYR6LscG9SchQ==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
