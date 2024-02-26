@@ -1,15 +1,11 @@
 {
-  "name": "@planet-matrix/starter-next",
+  "name": "planet-matrix-starter-next",
   "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@8.15.4",
   "repository": "planet-matrix/starter-next",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "bin": {
-    "run": "server.js",
-    "planet-matrix-starter-next": "server.js"
+    "index": "server.js"
   },
   "files": [
     ".next",
