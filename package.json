@@ -40,7 +40,7 @@
     "eslint": "^8.57.0",
     "eslint-config-hyoban": "^0.1.22",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "jotai": "^2.6.5",
+    "jotai": "^2.7.0",
     "jotai-dark": "^0.2.4",
     "jotai-effect": "^0.5.0",
     "lint-staged": "^15.2.2",
