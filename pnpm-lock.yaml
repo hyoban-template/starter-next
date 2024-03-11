@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^17.1.1
     version: 17.1.1(typescript@5.3.3)
   release-it-pnpm:
-    specifier: ^3.0.1
-    version: 3.0.1(release-it@17.1.1)
+    specifier: ^3.0.2
+    version: 3.0.2(release-it@17.1.1)
   shelljs:
     specifier: ^0.8.5
     version: 0.8.5
@@ -4960,8 +4960,8 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /release-it-pnpm@3.0.1(release-it@17.1.1):
-    resolution: {integrity: sha512-byMaZuzXyQ2/S2bqQiomfs3pAsPvTjwxTmxh/FF1RR96DEfBYqj83nFDBmGZi8a6dsC88EDFWoUZmf3hh0qU7Q==}
+  /release-it-pnpm@3.0.2(release-it@17.1.1):
+    resolution: {integrity: sha512-4Bc6SXDtAPpnT3Gf765z279v02o9qsyQj0arDSN4vYrIArww6CETk+IWdeSBEK2i3Y6B6Do59ubdEqlOXbfYSA==}
     hasBin: true
     peerDependencies:
       release-it: ^17.0.0
