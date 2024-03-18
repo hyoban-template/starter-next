@@ -62,14 +62,14 @@ devDependencies:
     specifier: ^4.6.0
     version: 4.6.0(eslint@8.57.0)
   jotai:
-    specifier: ^2.7.0
-    version: 2.7.0(@types/react@18.2.64)(react@18.2.0)
+    specifier: ^2.7.1
+    version: 2.7.1(@types/react@18.2.64)(react@18.2.0)
   jotai-dark:
     specifier: ^0.3.0
-    version: 0.3.0(jotai-effect@0.6.0)(jotai@2.7.0)(react@18.2.0)
+    version: 0.3.0(jotai-effect@0.6.0)(jotai@2.7.1)(react@18.2.0)
   jotai-effect:
     specifier: ^0.6.0
-    version: 0.6.0(jotai@2.7.0)
+    version: 0.6.0(jotai@2.7.1)
   lint-staged:
     specifier: ^15.2.2
     version: 15.2.2
@@ -4552,7 +4552,7 @@ packages:
     hasBin: true
     dev: true
 
-  /jotai-dark@0.3.0(jotai-effect@0.6.0)(jotai@2.7.0)(react@18.2.0):
+  /jotai-dark@0.3.0(jotai-effect@0.6.0)(jotai@2.7.1)(react@18.2.0):
     resolution: {integrity: sha512-Vuhymer1VLaAjSW+hLowZBZa0FSKMamo3xajXubCr0Jdnp5P80vrh/5s29EQ2cp3eSa9weuUy+kdoMKEDdp/sA==}
     peerDependencies:
       foxact: ^0.2.33
@@ -4569,21 +4569,21 @@ packages:
       react:
         optional: true
     dependencies:
-      jotai: 2.7.0(@types/react@18.2.64)(react@18.2.0)
-      jotai-effect: 0.6.0(jotai@2.7.0)
+      jotai: 2.7.1(@types/react@18.2.64)(react@18.2.0)
+      jotai-effect: 0.6.0(jotai@2.7.1)
       react: 18.2.0
     dev: true
 
-  /jotai-effect@0.6.0(jotai@2.7.0):
+  /jotai-effect@0.6.0(jotai@2.7.1):
     resolution: {integrity: sha512-PCewL5ThH3MXYI6+sQwvkk3o+gje4K1qw2YnyqjRVnZbIxqX3zHZv11JXqXosRkT8p3a51gd3pLv7+cBfyXz7A==}
     peerDependencies:
       jotai: '>=2.5.0'
     dependencies:
-      jotai: 2.7.0(@types/react@18.2.64)(react@18.2.0)
+      jotai: 2.7.1(@types/react@18.2.64)(react@18.2.0)
     dev: true
 
-  /jotai@2.7.0(@types/react@18.2.64)(react@18.2.0):
-    resolution: {integrity: sha512-4qsyFKu4MprI39rj2uoItyhu24NoCHzkOV7z70PQr65SpzV6CSyhQvVIfbNlNqOIOspNMdf5OK+kTXLvqe63Jw==}
+  /jotai@2.7.1(@types/react@18.2.64)(react@18.2.0):
+    resolution: {integrity: sha512-bsaTPn02nFgWNP6cBtg/htZhCu4s0wxqoklRHePp6l/vlsypR9eLn7diRliwXYWMXDpPvW/LLA2afI8vwgFFaw==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=17.0.0'
