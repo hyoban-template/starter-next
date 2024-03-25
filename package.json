@@ -44,7 +44,7 @@
     "jotai-dark": "^0.3.0",
     "jotai-effect": "^0.6.0",
     "lint-staged": "^15.2.2",
-    "lucide-react": "^0.358.0",
+    "lucide-react": "^0.363.0",
     "postcss": "^8.4.35",
     "react-twc": "^1.4.1",
     "release-it": "^17.1.1",
