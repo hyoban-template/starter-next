@@ -6,10 +6,10 @@ await import('./src/env.js')
 
 /** @type {import("next").NextConfig} */
 const config = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  output: 'standalone',
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	output: 'standalone',
 }
 
 export default config
