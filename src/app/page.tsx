@@ -1,5 +1,5 @@
-import { AppearanceSwitch } from '~/components/appearance-switch'
-import { Button } from '~/components/ui/button'
+import { AppearanceSwitch } from "~/components/appearance-switch";
+import { Button } from "~/components/ui/button";
 
 export default function Home() {
 	return (
@@ -7,5 +7,5 @@ export default function Home() {
 			<Button variant="outline">Hi</Button>
 			<AppearanceSwitch />
 		</div>
-	)
+	);
 }

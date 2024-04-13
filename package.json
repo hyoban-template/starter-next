@@ -1,8 +1,12 @@
 {
 	"name": "planet-matrix-starter-next",
-	"version": "1.0.1",
-	"repository": "planet-matrix/starter-next",
 	"type": "module",
+	"version": "1.0.1",
+	"packageManager": "pnpm@8.15.6",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/planet-matrix/starter-next"
+	},
 	"bin": {
 		"index": "server.js"
 	},
@@ -13,38 +17,36 @@
 	"scripts": {
 		"build": "next build && node after-build.js",
 		"dev": "next dev",
-		"lint": "prettier --check . && eslint .",
-		"lint:fix": "prettier --write . && eslint . --fix",
+		"lint": "prettier --list-different . && eslint",
+		"lint:fix": "prettier --list-different --write . && eslint --fix",
 		"start": "next start",
 		"typecheck": "tsc"
 	},
 	"dependencies": {
-		"next": "^14.1.4",
+		"next": "^14.2.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@egoist/tailwindcss-icons": "^1.7.4",
-		"@ianvs/prettier-plugin-sort-imports": "^4.2.1",
-		"@iconify-json/lucide": "^1.1.180",
+		"@iconify-json/lucide": "^1.1.181",
 		"@radix-ui/react-slot": "^1.0.2",
 		"@t3-oss/env-nextjs": "^0.9.2",
 		"@types/node": "^20.12.7",
-		"@types/react": "^18.2.75",
-		"@types/react-dom": "^18.2.24",
+		"@types/react": "^18.2.78",
+		"@types/react-dom": "^18.2.25",
 		"autoprefixer": "^10.4.19",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.0",
 		"eslint": "^9.0.0",
-		"eslint-config-hyoban": "^0.7.1",
+		"eslint-config-hyoban": "^1.0.0",
 		"jotai": "^2.8.0",
 		"jotai-dark": "^0.3.0",
 		"jotai-effect": "^1.0.0",
-		"lucide-react": "^0.367.0",
+		"lucide-react": "^0.368.0",
 		"postcss": "^8.4.38",
 		"prettier": "^3.2.5",
-		"prettier-plugin-curly": "^0.2.1",
-		"prettier-plugin-packagejson": "^2.4.14",
+		"prettier-config-hyoban": "^1.0.1",
 		"react-twc": "^1.4.1",
 		"shelljs": "^0.8.5",
 		"tailwind-merge": "^2.2.2",
@@ -53,5 +55,5 @@
 		"typescript": "^5.4.5",
 		"zod": "^3.22.4"
 	},
-	"packageManager": "pnpm@8.15.6"
+	"prettier": "prettier-config-hyoban"
 }
