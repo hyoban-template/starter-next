@@ -39,7 +39,7 @@
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.0",
 		"eslint": "^9.0.0",
-		"eslint-config-hyoban": "^1.0.0",
+		"eslint-config-hyoban": "^1.0.1",
 		"jotai": "^2.8.0",
 		"jotai-dark": "^0.3.0",
 		"jotai-effect": "^1.0.0",

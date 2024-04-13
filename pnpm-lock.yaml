@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^9.0.0
     version: 9.0.0
   eslint-config-hyoban:
-    specifier: ^1.0.0
-    version: 1.0.0(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5)
+    specifier: ^1.0.1
+    version: 1.0.1(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5)
   jotai:
     specifier: ^2.8.0
     version: 2.8.0(@types/react@18.2.78)(react@18.2.0)
@@ -1154,8 +1154,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-hyoban@1.0.0(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-m2ePzC29gS4lDDP3zBwm316IeKAa54OGKeJihRCYE2e1HLbzcSz8BOO9GM25aiJDB4t8x/GB8++N/6Jqi5gTQg==}
+  /eslint-config-hyoban@1.0.1(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-LPiIc9DuRGQM0b7PMKCgsAtrHIxZAxb3n8rwtBQ3mSF7Dbze5sGV6SLQaYwH7P0/FTtc/t68PXSfpxwkE8e/7A==}
     peerDependencies:
       eslint: ^8.56.0 || ^9.0.0
       typescript: '>=4.7.4'
@@ -1174,6 +1174,7 @@ packages:
       eslint-plugin-react-hooks: 4.6.0(eslint@9.0.0)
       eslint-plugin-simple-import-sort: 12.1.0(eslint@9.0.0)
       eslint-plugin-unicorn: 52.0.0(eslint@9.0.0)
+      globals: 15.0.0
       jsonc-eslint-parser: 2.4.0
       typescript: 5.4.5
       typescript-eslint: 7.6.0(eslint@9.0.0)(typescript@5.4.5)
@@ -1690,6 +1691,11 @@ packages:
 
   /globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+    dev: true
+
+  /globals@15.0.0:
+    resolution: {integrity: sha512-m/C/yR4mjO6pXDTm9/R/SpYTAIyaUB4EOzcaaMEl7mds7Mshct9GfejiJNQGjHHbdMPey13Kpu4TMbYi9ex1pw==}
     engines: {node: '>=18'}
     dev: true
 
