@@ -52,8 +52,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0
       eslint-config-hyoban:
-        specifier: ^2.0.0
-        version: 2.0.0(@typescript-eslint/parser@7.7.0(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)(typescript@5.4.5)
+        specifier: ^2.1.0
+        version: 2.1.0(@typescript-eslint/parser@7.7.0(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)(typescript@5.4.5)
       jotai:
         specifier: ^2.8.0
         version: 2.8.0(@types/react@18.2.79)(react@18.2.0)
@@ -73,8 +73,8 @@ importers:
         specifier: ^3.2.5
         version: 3.2.5
       prettier-config-hyoban:
-        specifier: ^2.0.3
-        version: 2.0.3
+        specifier: ^2.1.0
+        version: 2.1.0
       react-twc:
         specifier: ^1.4.1
         version: 1.4.1(@types/react@18.2.79)(react@18.2.0)
@@ -723,8 +723,8 @@ packages:
   eslint-config-flat-gitignore@0.1.5:
     resolution: {integrity: sha512-hEZLwuZjDBGDERA49c2q7vxc8sCGv8EdBp6PQYzGOMcHIgrfG9YOM6s/4jx24zhD+wnK9AI8mgN5RxSss5nClQ==}
 
-  eslint-config-hyoban@2.0.0:
-    resolution: {integrity: sha512-16pbR6d/aOUMAN0bdszpJrDrYBqIpADiLCKadbpKnDjJded62qG73TGL39Tixu3hXKGkfYkystg4jjPuX6yD0A==}
+  eslint-config-hyoban@2.1.0:
+    resolution: {integrity: sha512-xCvrJBonIN5pe/wYeDKRyLF5yZEpxWi96rNZodd0Wt+oNF24mXWaHMOAiNSh4Vhp8qCIawfPm78SxFXsx5IHeg==}
     peerDependencies:
       eslint: ^8.56.0 || ^9.0.0
       typescript: '>=4.7.4'
@@ -1433,8 +1433,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-config-hyoban@2.0.3:
-    resolution: {integrity: sha512-PAuvbJNbC9vyMT4kKR0eGGENhmGW73/lsNtjianEL0N2gySZoXQvwWy5jJ5IjbNNWOZHTfy20HGJK2KeOumByw==}
+  prettier-config-hyoban@2.1.0:
+    resolution: {integrity: sha512-NF5SZg4cyalk927wb0lfR0i7nQFfy1bXZQ2EGbILhLeTBAki7K0THelhwoCjjr+9azfnnT+C0bQZSmknJ+6wcg==}
 
   prettier@3.2.5:
     resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
@@ -2471,7 +2471,7 @@ snapshots:
       find-up: 7.0.0
       parse-gitignore: 2.0.0
 
-  eslint-config-hyoban@2.0.0(@typescript-eslint/parser@7.7.0(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)(typescript@5.4.5):
+  eslint-config-hyoban@2.1.0(@typescript-eslint/parser@7.7.0(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)(typescript@5.4.5):
     dependencies:
       '@eslint-react/eslint-plugin': 1.5.9(@typescript-eslint/parser@7.7.0(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)(typescript@5.4.5)
       '@eslint/js': 9.1.1
@@ -3263,7 +3263,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-config-hyoban@2.0.3: {}
+  prettier-config-hyoban@2.1.0: {}
 
   prettier@3.2.5: {}
 
