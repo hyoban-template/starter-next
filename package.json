@@ -17,8 +17,8 @@
   "scripts": {
     "build": "next build && node after-build.js",
     "dev": "next dev",
-    "lint": "prettier --list-different . && eslint",
-    "lint:fix": "prettier --list-different --write . && eslint --fix",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "start": "next start",
     "typecheck": "tsc"
   },
@@ -45,8 +45,6 @@
     "jotai-effect": "^1.0.0",
     "lucide-react": "^0.372.0",
     "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
-    "prettier-config-hyoban": "^2.1.0",
     "react-twc": "^1.4.1",
     "shelljs": "^0.8.5",
     "tailwind-merge": "^2.3.0",
@@ -54,6 +52,5 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.5",
     "zod": "^3.22.5"
-  },
-  "prettier": "prettier-config-hyoban"
+  }
 }
