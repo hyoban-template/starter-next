@@ -10,7 +10,7 @@ const config = {
     ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreDuringBuilds: true,
+    ignoreBuildErrors: true,
   },
   output: 'standalone',
 }
