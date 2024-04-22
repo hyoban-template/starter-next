@@ -2,7 +2,7 @@
   "name": "planet-matrix-starter-next",
   "type": "module",
   "version": "1.0.1",
-  "packageManager": "pnpm@9.0.4",
+  "packageManager": "pnpm@9.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/planet-matrix/starter-next"
@@ -29,9 +29,9 @@
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.7.4",
-    "@iconify-json/lucide": "^1.1.183",
+    "@iconify-json/lucide": "^1.1.184",
     "@radix-ui/react-slot": "^1.0.2",
-    "@t3-oss/env-nextjs": "^0.9.2",
+    "@t3-oss/env-nextjs": "^0.10.0",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
@@ -45,12 +45,11 @@
     "jotai-effect": "^1.0.0",
     "lucide-react": "^0.372.0",
     "postcss": "^8.4.38",
-    "react-twc": "^1.4.1",
     "shelljs": "^0.8.5",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.5",
-    "zod": "^3.22.5"
+    "zod": "^3.23.0"
   }
 }
