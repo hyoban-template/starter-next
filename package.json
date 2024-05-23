@@ -1,11 +1,11 @@
 {
-  "name": "planet-matrix-starter-next",
+  "name": "starter-next",
   "type": "module",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "packageManager": "pnpm@9.1.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/planet-matrix/starter-next"
+    "url": "https://github.com/hyoban/starter-next"
   },
   "bin": {
     "index": "server.js"
